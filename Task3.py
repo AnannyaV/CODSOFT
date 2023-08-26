@@ -17,7 +17,7 @@ def generate_password(length, complexity):
     elif complexity == '2':
         character_sets = [lowercase_letters, uppercase_letters, digits, special_characters]
     else:
-        character_sets = [lowercase_letters, uppercase_letters, digits, special_characters]
+        print("Please Enter a valid choice.") 
     
     # Initializing an empty password string
     password = ''
