@@ -57,6 +57,13 @@ class QuizGame:
             time.sleep(1)
         
         print(f"Quiz completed! Your score: {self.score}/{len(self.questions)}")
+        if self.score >= 7 :
+            print("EXCELLENT...Keep It Up!!!!")
+        elif self.score < 7 and self.score > 4:
+            print("Not that Bad...keep trying!!")
+        else:
+            print("Work Hard on Your Mythological Skills Dude!!!") 
+        self.score = 0               
 
 # Question instances
 questions = [
@@ -65,8 +72,8 @@ questions = [
     MultipleChoiceQuestion("How many Avatars are there of Vishnu in the divine yugas?", ["11", "5", "10", "7"], "10"),
     MultipleChoiceQuestion("What is the coorect order of Vishnu avatars in the four yugas?", ["4,3,2,1", "1,2,3,4", "3,2,4,1", "4,2,1,3"], "4,3,2,1"),
     MultipleChoiceQuestion("What is the name of the second Yuga?", ["Satya-yuga", "Treta-yuga", "Kali-yuga", "Dvaapar-yuga"], "Treta-yuga"),
-    MultipleChoiceQuestion("Who used Brahmastra in Mahabharata to end the Pandava's Dynasty?", ["Bhishma", "Ashwatthama", "Arjuna", "Karan"], "Ashwatthama"),
-    MultipleChoiceQuestion("Who told Hanumana about the Sanjeevni Booti?", ["Vibhishana", "Sushen", "Rama", "Lakshmana"], "Sushen"),
+    MultipleChoiceQuestion("Who used Brahmastra in Mahabharata to end the Pandava's Dynasty?", ["Ashwatthama", "Bhishma", "Arjuna", "Karan"], "Ashwatthama"),
+    MultipleChoiceQuestion("Who told Hanumana about the Sanjeevni Booti?", ["Vibhishana", "Rama", "Sushen", "Lakshmana"], "Sushen"),
     MultipleChoiceQuestion("Who was the first ever human being created by Brahma?", ["Dhruv", "Manu", "Shatrupa", "Vishnugupt"], "Manu"),
     FillInTheBlankQuestion("_____ was the father of Kauravas?", "Dhritarashtra"),
     FillInTheBlankQuestion("_____ avatar of Vishnu would be there in Kaliyug?", "Kalki")
@@ -79,15 +86,16 @@ print("---------------------------------WELCOME TO THE QUIZ GAME----------------
 time.sleep(2.5)
 print("_______________________________________HINDU MYTHOLOGY_______________________________________")
 time.sleep(2.5)
-print("_________________If you believe it as a MYTH then its a MYTHOLOGY for you!!_________________")
+print("__________________If you believe it as a MYTH then its a MYTHOLOGY for you!!__________________")
 time.sleep(5)
-print("________________But if you believe it as TRUTH then its a SATYALOGY for you!!________________")
+print("_________________But if you believe it as TRUTH then its a SATYALOGY for you!!_________________")
 time.sleep(5)
 print("______________READY TO DIVE INTO THE MOST EXCLUSIVE QUIZ ABOUT HINDU MYTHOLOGY???______________")
 time.sleep(5)
 print("__________________________________________LET'S GO!__________________________________________")
 time.sleep(2.5)
-
+print("_______________There will be 10 questions randomly of either MCQ's and Fill-ups_______________")
+time.sleep(2.5)
 quiz = QuizGame(questions)
 while(True):
     quiz.run()
